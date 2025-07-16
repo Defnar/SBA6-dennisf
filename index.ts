@@ -11,6 +11,7 @@ async function getProduct(url: string) {
     return product;
 }
 
+//sets this to a global variable I can use outside the chain, if I need to do so
 let product: Product;
 
 getProduct(url)
