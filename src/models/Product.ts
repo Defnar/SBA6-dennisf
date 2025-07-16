@@ -22,15 +22,12 @@ export default class Product {
             
     }
 
+
     displayDetails() {
         console.log(this);
     }
 
     getPriceWithDiscount() {
         return this.price - calculateDiscount(this);
-    }
-
-    outputDetails() {
-
     }
 }

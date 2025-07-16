@@ -18,7 +18,5 @@ class Product {
     getPriceWithDiscount() {
         return this.price - (0, discountCalculator_1.default)(this);
     }
-    outputDetails() {
-    }
 }
 exports.default = Product;
