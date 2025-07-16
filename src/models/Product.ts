@@ -1,7 +1,7 @@
 import calculateDiscount from "../utils/discountCalculator";
 
 
-//product class.  Readonly for easier use. Shortened to data needed only
+//product class.  Readonly on properties for easier use. Shortened to data needed only
 export default class Product {
     readonly title: string;
     readonly category: string;

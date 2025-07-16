@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const discountCalculator_1 = __importDefault(require("../utils/discountCalculator"));
-//product class.  Readonly for easier use. Shortened to data needed only
+//product class.  Readonly on properties for easier use. Shortened to data needed only
 class Product {
     constructor(title, category, price, discountPercentage) {
         this.title = title;
