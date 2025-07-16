@@ -28,6 +28,6 @@ export default class Product {
     }
 
     getPriceWithDiscount() {
-        return this.price - calculateDiscount(this);
+        return (this.price - calculateDiscount(this)).toFixed(2);
     }
 }

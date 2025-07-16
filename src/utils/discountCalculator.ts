@@ -4,7 +4,7 @@ import { DataError } from "./errorHandler";
 //returns discount, to 2 decimals
 export default function calculateDiscount(product: Product): number {
   const price = product.price;
-  const discount = product.discountPercentage;
+  const discount = product.discountPercentage/100;
 
   //checks if price and discount are numbers, and throws an error if they aren't
   if (isNaN(price)) {

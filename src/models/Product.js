@@ -16,7 +16,7 @@ class Product {
         console.log(this);
     }
     getPriceWithDiscount() {
-        return this.price - (0, discountCalculator_1.default)(this);
+        return (this.price - (0, discountCalculator_1.default)(this)).toFixed(2);
     }
 }
 exports.default = Product;

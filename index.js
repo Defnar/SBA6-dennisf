@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const apiService_1 = require("./src/services/apiService");
 const Product_1 = __importDefault(require("./src/models/Product"));
 const taxCalculator_1 = __importDefault(require("./src/utils/taxCalculator"));
-const url = 'https://dummyjson.com/products/1';
+const url = "https://dummyjson.com/products/1";
 function getProduct(url) {
     return __awaiter(this, void 0, void 0, function* () {
         const productData = yield (0, apiService_1.fetchData)(url);
@@ -23,10 +23,10 @@ function getProduct(url) {
         return product;
     });
 }
-let product;
 getProduct(url)
-    .then((newProduct) => product = newProduct)
-    .then(() => product.displayDetails())
-    .then(() => product.getPriceWithDiscount())
-    .then(() => console.log(`tax is $${(0, taxCalculator_1.default)(product)}`))
-    .catch(err => console.error(err));
+    .then((product) => {
+    product.displayDetails();
+    console.log(`This product, with discount, is $${product.getPriceWithDiscount()}`);
+    console.log(`tax is $${(0, taxCalculator_1.default)(product)}`);
+})
+    .catch((err) => console.error(err));
