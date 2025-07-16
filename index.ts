@@ -17,5 +17,6 @@ getProduct(url)
 .then((newProduct) => product = newProduct)
 .then(() => product.displayDetails())
 .then(() => product.getPriceWithDiscount())
-.then(() => console.log(`tax is $${calculateTax(product)}`));
+.then(() => console.log(`tax is $${calculateTax(product)}`))
+.catch(err => console.error(err));
 

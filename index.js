@@ -28,4 +28,5 @@ getProduct(url)
     .then((newProduct) => product = newProduct)
     .then(() => product.displayDetails())
     .then(() => product.getPriceWithDiscount())
-    .then(() => console.log(`tax is $${(0, taxCalculator_1.default)(product)}`));
+    .then(() => console.log(`tax is $${(0, taxCalculator_1.default)(product)}`))
+    .catch(err => console.error(err));
