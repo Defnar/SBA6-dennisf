@@ -16,3 +16,4 @@
 ## Asynchronous operations and error management
 - I only found potential need for 2 errors:  fetch errors and validating types in mathematical equations.  Each of these have their own error name which will return a custom error.
 - For async, I used async and await for fetch operations, data conversion with await response.json().  Anything dealing with the retrieved data is handled through promise chaining, using .then().then() etc.  .catch is thrown at the end of the testing chain to catch and display any errors
+- in async functions , use try-catch blocks for error catching, and in the promise chain I use .catch
