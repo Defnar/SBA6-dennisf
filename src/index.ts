@@ -1,6 +1,6 @@
-import { fetchData } from "./src/services/apiService";
-import Product from "./src/models/Product";
-import calculateTax from "./src/utils/taxCalculator";
+import { fetchData } from "./services/apiService";
+import Product from "./models/Product";
+import calculateTax from "./utils/taxCalculator";
 
 const url = "https://dummyjson.com/products/1";
 
