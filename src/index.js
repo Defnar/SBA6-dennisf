@@ -12,9 +12,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const apiService_1 = require("./src/services/apiService");
-const Product_1 = __importDefault(require("./src/models/Product"));
-const taxCalculator_1 = __importDefault(require("./src/utils/taxCalculator"));
+const apiService_1 = require("./services/apiService");
+const Product_1 = __importDefault(require("./models/Product"));
+const taxCalculator_1 = __importDefault(require("./utils/taxCalculator"));
 const url = "https://dummyjson.com/products/1";
 function getProduct(url) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -29,4 +29,4 @@ getProduct(url)
     console.log(`This product, with discount, is $${product.getPriceWithDiscount()}`);
     console.log(`tax is $${(0, taxCalculator_1.default)(product)}`);
 })
-    .catch((err) => console.error(err));
+    .catch((err) => console.error(err.message));
